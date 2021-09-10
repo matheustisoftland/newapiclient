@@ -121,7 +121,7 @@ router.get('/:id_produtos',(req, res, next)=> {
 //ALTERA UMA LOTE
 router.patch('/', (req, res, next) => {
     mysql.getConnection((error, conn)=>{
-    if (error) {return res.status(500).send({ error: error})}
+    //if (error) {return res.status(500).send({ error: error})}
         conn.query(
             `UPDATE produtos 
             SET nome          =?,
